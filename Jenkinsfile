@@ -1,11 +1,6 @@
 pipeline {
     agent { docker { image 'golang' } }
     stages {
-        stage('Test') {
-            steps {
-                sh 'echo "Fail!"; exit 1'
-            }
-        }
         stage('build') {
             steps {
                 sh 'go version'
